@@ -1,0 +1,19 @@
+.SignInNewDeviceName, .SignIn, #NewDeviceName::placeholder, #SelectTypeList, #SelectType, #SignInButtom{
+    font-family: cursive, Arial, sans-serif;
+}
+
+.SignInNewDeviceName{
+    font-size: 50px;
+}
+
+#NewDeviceName::placeholder{/*輸入新設名稱*/
+    color: #a3a3c2;
+}
+
+#SelectTypeList{/*選擇設備種類*/
+
+}
+
+#SignInButtom{/*註冊事件*/
+
+}
