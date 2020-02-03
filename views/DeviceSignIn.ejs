@@ -8,8 +8,10 @@
 <body>
 	<p class="SignInNewDeviceName">註冊新的設備</p>
 	<div class="SignIn">
-		<form method="POST" action="/SignIn"><!--wk5 p.65-->	
-			<input type="text" class="DevieName" name="DevieName" placeholder="輸入設備名稱"><!--命名新設備名稱-->
+		<form method="POST" action="/SignIn">
+			<input type="text" class="DevieIP" name="DevieIP" placeholder="IP">
+			<input type="text" class="DevieMAC" name="DevieMAC" placeholder="MAC">
+			<input type="text" class="DevieName" name="DevieName" placeholder="輸入名稱"><!--命名新設備名稱-->
 			<select class="SelectType" name="SelectTypeList">
 				<option value="Socket">插座</option><!--智慧插座-->
 				<option value="Environment">環境</option><!--環境監控-->
