@@ -1,4 +1,4 @@
-.SignInNewDeviceName, .SignIn, #NewDeviceName::placeholder, #SelectTypeList, #SelectType, #SignInButtom{
+.SignInNewDeviceName, .DevieName, .SelectType, .SignInButtom{
     font-family: cursive, Arial, sans-serif;
 }
 

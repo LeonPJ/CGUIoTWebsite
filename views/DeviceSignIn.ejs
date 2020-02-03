@@ -2,23 +2,22 @@
 <html lang="zh"><!--中文網站-->
 <head>
 	<meta charset="utf-8">
-	<link href="css/DeviceSignIn.css" type="text/css" rel="stylesheet" />
+	<link href="assets/css/DeviceSignIn.css" type="text/css" rel="stylesheet" />
 	<title></title>
 </head>
 <body>
 	<p class="SignInNewDeviceName">註冊新的設備</p>
 	<div class="SignIn">
-		<form method="POST" action=""><!--wk5 p.65-->
-			<input type="text" id="NewDeviceName" placeholder="輸入設備名稱"><!--命名新設備名稱-->
-			<select id="SelectType" name="SelectTypeList">
+		<form method="POST" action="/SignIn"><!--wk5 p.65-->	
+			<input type="text" class="DevieName" name="DevieName" placeholder="輸入設備名稱"><!--命名新設備名稱-->
+			<select class="SelectType" name="SelectTypeList">
 				<option value="Socket">插座</option><!--智慧插座-->
 				<option value="Environment">環境</option><!--環境監控-->
 				<option value="Light">燈具</option><!--燈具控制-->
 				<option value="IRBody">人體</option><!--人體紅外線-->
 				<option value="DoorCount">人數</option><!--出入口計數-->
-			  </select>
-			<input type="submit" id="SignInButtom" value="註冊">
-			<!--<button onclick="getCountry()">取得Radio和Select</button>-->
+			</select>
+			<input type="submit" class="SignInButtom" value="註冊">
 		</form>
 	</div>
 </body>
