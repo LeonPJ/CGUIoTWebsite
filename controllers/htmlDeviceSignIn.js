@@ -24,10 +24,10 @@ module.exports = function(app) {
           };
           request(options, function (error, response) { 
             if (error) throw new Error(error);
-            console.log(JSON.parse(response.body).message);//將JSON字串解析成JavaScript物件
-            console.log(JSON.parse(response.body).data);
-            res.send(JSON.parse(response.body).message);
-
+            let ReturnMessage = JSON.parse(response.body);//將JSON字串解析成JavaScript物件
+            console.log(ReturnMessage.message);
+            console.log(ReturnMessage.data);
+            res.send(ReturnMessage.message);
           });
         /*console.log(req.body.DevieIP);
         console.log(req.body.DevieMAC);
