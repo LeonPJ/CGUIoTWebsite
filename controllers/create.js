@@ -6,7 +6,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 module.exports = function(app) {
 
 	app.get('/', function(req, res) {
-		res.render('DeviceSignIn');
+		res.render('CreateDevice');
 	});
 
     app.post('/SignIn', urlencodedParser, function(req, res){

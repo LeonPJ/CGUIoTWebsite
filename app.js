@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-var htmlController= require('./controllers/htmlDeviceSignIn');
+var CreateDevice= require('./controllers/create');
 
 var port = process.env.PORT || 3000;
 
@@ -13,6 +13,6 @@ app.use('/', function(req, res, next){
     next();
 });
 
-htmlController(app);
+CreateDevice(app);
 
 app.listen(port);
