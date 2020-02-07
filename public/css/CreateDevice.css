@@ -1,8 +1,8 @@
-.SignInNewDeviceName, .DevieIP, .DevieMAC, .DevieName, .SelectType, .SignInButtom{
+.CreateNewDevice, .DevieIP, .DevieMAC, .DevieName, .SelectType, .CreateButtom{
     font-family: cursive, Arial, sans-serif;
 }
 
-.SignInNewDeviceName{
+.CreateNewDevice{
     font-size: 50px;
 }
 

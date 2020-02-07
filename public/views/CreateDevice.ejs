@@ -2,24 +2,31 @@
 <html lang="zh"><!--中文網站-->
 <head>
 	<meta charset="utf-8">
-	<link href="assets/css/CreateDevice.css" type="text/css" rel="stylesheet" />
+	<link href="css/CreateDevice.css" type="text/css" rel="stylesheet" />
+	<!--for AJAX-->
+	<script	src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="js/main.js"></script>
+
 	<title></title>
 </head>
 <body>
-	<p class="SignInNewDeviceName">註冊新的設備</p>
-	<div class="SignIn">
-		<form method="POST" action="/SignIn">
-			<input type="text" class="DevieIP" name="DevieIP" placeholder="IP">
-			<input type="text" class="DevieMAC" name="DevieMAC" placeholder="MAC">
-			<input type="text" class="DevieName" name="DevieName" placeholder="輸入名稱"><!--命名新設備名稱-->
-			<select class="SelectType" name="SelectTypeList">
+	<p class="CreateNewDevice">註冊新的裝置</p>
+	<div class="CreateList">
+		<!--<form method="POST" action="/Create">-->
+		<form method="POST" id="Create">
+			<input type="text" id="DevieIP" name="DevieIP" placeholder="IP"><!--裝置基本資料-->
+			<input type="text" id="DevieMAC" name="DevieMAC" placeholder="MAC">
+			<input type="text" id="DevieName" name="DevieName" placeholder="輸入名稱">
+			<select id="SelectType" name="SelectTypeList"><!--裝置種類-->
 				<option value="Socket">插座</option><!--智慧插座-->
 				<option value="Environment">環境</option><!--環境監控-->
 				<option value="Light">燈具</option><!--燈具控制-->
 				<option value="IRBody">人體</option><!--人體紅外線-->
 				<option value="DoorCount">人數</option><!--出入口計數-->
 			</select>
-			<input type="submit" class="SignInButtom" value="註冊">
+			<!--<input type="button" class="CreateButtom" value="註冊" onclick=create()>-->
+			<input type="submit" class="CreateButtom" value="註冊">
+		<!--</form>-->
 		</form>
 	</div>
 </body>
