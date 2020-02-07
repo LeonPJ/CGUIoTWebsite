@@ -25,5 +25,5 @@ module.exports = function(req, res) {//HTTP請求
   //console.log(req.body.DevieIP);
   //console.log(req.body.DevieMAC);
   //console.log(req.body.DevieName);
-  //console.log(req.body.SelectTypeList);
+  //console.log(req.body.SelectType);
 }

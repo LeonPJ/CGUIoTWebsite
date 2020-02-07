@@ -1,10 +1,10 @@
 $(document).ready(function(){
     $("form#Create").on('submit', function(e){
         e.preventDefault();
-        //var data = $('input[name=DevieIP]').val();
-        /*console.log($('input[name=DevieIP]').val());
-        console.log($('input[name=DevieMAC]').val());
-        console.log($('input[name=DevieName]').val());*/
+        var DevieIP = $('input[name=DevieIP]').val();
+        var DevieMAC = $('input[name=DevieMAC]').val();
+        var DevieName = $('input[name=DevieName]').val();
+        var SelectType = $('select[name=SelectType]').val();
 
         var settings = {
             "url": "/Create",
@@ -14,9 +14,10 @@ $(document).ready(function(){
               "Content-Type": "application/x-www-form-urlencoded"
             },
             "data": {
-              "name": $('input[name=DevieName]').val(),
-              "mac_address": $('input[name=DevieMAC]').val(),
-              "ip_address": $('input[name=DevieIP]').val()
+              "DevieName": DevieName,
+              "DevieMAC": DevieMAC,
+              "DevieIP": DevieIP,
+              "SelectType": SelectType
             }
           };
           
@@ -24,21 +25,19 @@ $(document).ready(function(){
             console.log(response);
           });
 
-      //  $.ajax({
-          //  type: 'post',
-         //   url: '/ajax',
-        //    data: data,
-        //    dataType: 'text'
-       // })
-        //.done(function(data){
-        //    $('h1').html(data.quote);
-        //});
+        /*$.ajax({
+            type: 'post',
+            url: '/ajax',
+            data: data,
+            dataType: 'text'
+        })
+            .done(function(data){
+                $('h1').html(data.quote);
+            });*/
     });
 });
 
-/*
-
-function create(){
+/*function create(){
     var DevieIP = document.getElementById('DevieIP').value;
     var DevieMAC = document.getElementById('DevieMAC').value;
     var DevieName = document.getElementById('DevieName').value;
@@ -63,9 +62,5 @@ function create(){
 
 xhr.open("POST", "http://120.126.8.126/api/device?api_token=60kSeSf78sXjr0W9AtZoxMC9vIj1gzZP8GcdtHtTIaELm7PteocrYzBgjFVD", true);
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
 xhr.send(data);
-
-
-}
-*/
+}*/
