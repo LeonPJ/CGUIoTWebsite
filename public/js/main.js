@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     $("form#Create").on('submit', function(e){
         e.preventDefault();
         var DevieIP = $('input[name=DevieIP]').val();
@@ -23,7 +23,7 @@ $(document).ready(function(){
           
           $.ajax(settings).done(function (response) {
             console.log(response);
-          });
+          });*/
 
         /*$.ajax({
             type: 'post',
@@ -34,33 +34,40 @@ $(document).ready(function(){
             .done(function(data){
                 $('h1').html(data.quote);
             });*/
-    });
-});
+    /*});
+});*/
 
-/*function create(){
-    var DevieIP = document.getElementById('DevieIP').value;
-    var DevieMAC = document.getElementById('DevieMAC').value;
-    var DevieName = document.getElementById('DevieName').value;
-    var SelectType = document.getElementById('SelectType').value;
 
-    console.log(DevieIP);
-    console.log(DevieMAC);
-    console.log(DevieName);
-    console.log(SelectType);
+function create(){
+  var DevieIP = document.getElementById('DevieIP').value;
+  var DevieMAC = document.getElementById('DevieMAC').value;
+  var DevieName = document.getElementById('DevieName').value;
+  var SelectType = document.getElementById('SelectType').value;
 
-    var data = "name=" + DevieName + "&mac_address=" + DevieMAC + "&ip_address=" + DevieIP;
+  /*console.log(DevieIP);
+  console.log(DevieMAC);
+  console.log(DevieName);
+  console.log(SelectType);*/
 
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
-    xhr.addEventListener("readystatechange", function() {
-        if(this.readyState === 4) {
-        console.log(this.responseText);
-    }
-    
-});
+  var urlencoded = new URLSearchParams();
+  urlencoded.append("DevieIP", DevieIP);
+  urlencoded.append("DevieMAC", DevieMAC);
+  urlencoded.append("DevieName", DevieName);
+  urlencoded.append("SelectType", SelectType);
 
-xhr.open("POST", "http://120.126.8.126/api/device?api_token=60kSeSf78sXjr0W9AtZoxMC9vIj1gzZP8GcdtHtTIaELm7PteocrYzBgjFVD", true);
-xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-xhr.send(data);
-}*/
+  var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: urlencoded,
+    redirect: 'follow'
+  };
+
+  fetch("/Create", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+
+}
