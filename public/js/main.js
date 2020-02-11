@@ -1,43 +1,3 @@
-/*$(document).ready(function(){
-    $("form#Create").on('submit', function(e){
-        e.preventDefault();
-        var DevieIP = $('input[name=DevieIP]').val();
-        var DevieMAC = $('input[name=DevieMAC]').val();
-        var DevieName = $('input[name=DevieName]').val();
-        var SelectType = $('select[name=SelectType]').val();
-
-        var settings = {
-            "url": "/Create",
-            "method": "POST",
-            "timeout": 0,
-            "headers": {
-              "Content-Type": "application/x-www-form-urlencoded"
-            },
-            "data": {
-              "DevieName": DevieName,
-              "DevieMAC": DevieMAC,
-              "DevieIP": DevieIP,
-              "SelectType": SelectType
-            }
-          };
-          
-          $.ajax(settings).done(function (response) {
-            console.log(response);
-          });*/
-
-        /*$.ajax({
-            type: 'post',
-            url: '/ajax',
-            data: data,
-            dataType: 'text'
-        })
-            .done(function(data){
-                $('h1').html(data.quote);
-            });*/
-    /*});
-});*/
-
-
 function create(){
   var DevieIP = document.getElementById('DevieIP').value;
   var DevieMAC = document.getElementById('DevieMAC').value;
@@ -57,6 +17,29 @@ function create(){
   urlencoded.append("DevieMAC", DevieMAC);
   urlencoded.append("DevieName", DevieName);
   urlencoded.append("SelectType", SelectType);
+
+  //console.log("ready to convert obj to string");
+  var TYPE = SelectType.toString();//將物件轉為字串
+
+  switch(TYPE) {
+    case "Socket":
+      console.log("this is Socket");
+      break;
+    case "Environment":
+      console.log("this is Environment");
+      break;
+    case "Light":
+      console.log("this is Light");
+      break;
+    case "IRBody":
+      console.log("this is IRBody");
+      break;
+    case "DoorCount":
+      console.log("this is DoorCount");
+      break;
+    default:
+      console.log("cant find type");
+  }
 
   var requestOptions = {
     method: 'POST',

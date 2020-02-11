@@ -4,10 +4,6 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 
 module.exports = function(req, res) {//HTTP請求
-  /*console.log( req.body.DevieName);
-  console.log( req.body.DevieMAC);
-  console.log( req.body.DevieIP);
-  console.log( req.body.SelectType);*/
   var options = {
     'method': 'POST',
     'url': 'http://120.126.8.126/api/device?api_token=60kSeSf78sXjr0W9AtZoxMC9vIj1gzZP8GcdtHtTIaELm7PteocrYzBgjFVD',
