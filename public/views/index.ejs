@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh"><!--中文網站-->
+<head>
+    <meta charset="utf-8">
+    <title>CGUIoTWeb</title>
+	<!--<link href="css/CreateDevice.css" type="text/css" rel="stylesheet" />-->
+	<!--for AJAX-->
+	<!--<script src="js/main.js"></script>-->
+    <script src="js/ejs_production.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js" ></script>
+</head>
+<!--<body onload=readIndoor()>-->
+<body>
+    <div id="IndoorPerson">
+        <%- include('numberperson'); %><!--室內人數-->
+    </div>
+    <div id="readNumberPerson">
+
+    </div>
+
+    <div id="SmarkSocket">
+        <%- include('smartsocket'); %><!--智慧插座-->
+    </div>
+
+    <div id="light">
+        <%- include('light'); %><!--燈具-->
+    </div>
+
+    <div id="Environment">
+        <%- include('environment'); %><!--環境監控-->
+    </div>
+
+</body>
+</html>
