@@ -22,14 +22,12 @@ function readIndoor(){
       //var html = new EJS({url: 'views/readperson.ejs'});// 
       document.getElementById("readNumberPerson").innerHTML = result;
     })// 接收 controllers readperson.js 回傳值
-
     .catch(error => console.log('error', error));
   
 }
 
 //歷史室內人數
 function readIndoorHistory(){
-
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
   
@@ -76,10 +74,11 @@ function drawPersonChart(timestamp, value){
     },
     options:{
       scales: {
+        xAxes: [{
+          display: true
+         }],
         yAxes: [{
-            ticks: {
-                beginAtZero: true
-            }
+          display: true
         }]
       }
     }
