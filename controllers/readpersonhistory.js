@@ -19,8 +19,10 @@ module.exports = function(req, res, next) {//HTTP請求
             Object.keys(message.data[i]).length;
             var dataNumber = i;// 計算出長度後儲存成變數
             //console.log(i);
+            
         }
         //console.log(message.data[dataNumber].value);// 利用儲存變數顯示最新資料
-        res.status(200).json(message.data[dataNumber].value);// 200成功回應 400用戶錯誤訊息 500伺服器錯誤回應
+        res.status(200).json(message.data);// 取得所有 JSON 資料
+        //res.send(message.data);
       });
 }

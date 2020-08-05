@@ -1,0 +1,13 @@
+body{
+    font-family: cursive, Arial, sans-serif;
+}
+
+.indoorperson{
+    font-size: 25px;
+    display: flex;
+}
+
+.chart{
+    width: 800px;
+    height: 800px;
+}

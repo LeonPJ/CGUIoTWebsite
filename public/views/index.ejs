@@ -8,17 +8,17 @@
 	<!--<script src="js/main.js"></script>-->
     <script src="js/ejs_production.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js" ></script>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" href="#" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 </head>
-<!--<body onload=readIndoor()>-->
-<body>
+<body onload=entryload()>
+    
+<!--<body>-->
     <div id="IndoorPerson">
         <%- include('numberperson'); %><!--室內人數-->
     </div>
-    <div id="readNumberPerson">
-
-    </div>
-
+    
     <div id="SmarkSocket">
         <%- include('smartsocket'); %><!--智慧插座-->
     </div>
