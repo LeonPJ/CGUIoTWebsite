@@ -52,19 +52,6 @@ function readIndoorHistory(){
         value[i] = arrayJSON[i].value;
       }
       drawPersonChart(timestamp, value);
-      /*var ctx = document.getElementById('chart').getContext('2d');
-      var chart = new Chart(ctx, {
-        type:'line',
-        data:{
-          labels: timestamp,
-          datasets:[{
-            label: '人數',
-            borderColor:'rgb(255, 99, 132)',
-            data: value
-          }]
-        },
-        options:{}
-      });*/
       //document.getElementById("readNumberPersonHistory").innerHTML = result;
     })// 接收 controllers readpersonhistory.js 回傳值
     .catch(error => console.log('error', error));
@@ -79,7 +66,7 @@ function drawPersonChart(timestamp, value){
       labels: timestamp,
       datasets:[{
         label: '歷史室內人數',// 圖名稱
-        lineTension:0, //曲線的彎曲
+        lineTension: 0, //曲線的彎曲
         borderWith: 0,// 線條圖邊線寬
         borderColor: 'rgba(54, 162, 235, 0.5)',// 線條圖邊線顏色
         backgroundColor: 'rgba(54, 162, 235, 0.5)',// 線條圖背景色
