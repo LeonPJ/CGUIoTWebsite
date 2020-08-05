@@ -16,7 +16,7 @@ module.exports = function(req, res, next) {//HTTP請求
         //console.log(response.body);
         dataLength = message.data.length;
         for(let i=0; i<dataLength; i++) {// 計算物件內長度
-            Object.keys(message.data[i]).length;
+            //Object.keys(message.data[i]).length;
             var dataNumber = i;// 計算出長度後儲存成變數
             //console.log(i);
         }

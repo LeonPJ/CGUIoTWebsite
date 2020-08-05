@@ -42,64 +42,59 @@ function readIndoorHistory(){
   var timestamp = [];
   var value = [];
 
-
   fetch("/readpersonhistory", requestOptions)
     .then(response => response.text())
     .then(result => {
-
       var arrayJSON = JSON.parse(result);
       dataLength = arrayJSON.length;
       for(let i=0; i<dataLength; i++) {// 計算物件內長度
         timestamp[i] = arrayJSON[i].created_at;
         value[i] = arrayJSON[i].value;
-        
       }
-      show(timestamp, value);
-
+      drawPersonChart(timestamp, value);
+      /*var ctx = document.getElementById('chart').getContext('2d');
+      var chart = new Chart(ctx, {
+        type:'line',
+        data:{
+          labels: timestamp,
+          datasets:[{
+            label: '人數',
+            borderColor:'rgb(255, 99, 132)',
+            data: value
+          }]
+        },
+        options:{}
+      });*/
       //document.getElementById("readNumberPersonHistory").innerHTML = result;
     })// 接收 controllers readpersonhistory.js 回傳值
     .catch(error => console.log('error', error));
-
 }
 
-function show(timestamp, value){
-  //console.log(timestamp);
-  //console.log(value);
-  var lineChartData = {
-    labels: [timestamp], //顯示區間名稱
-    datasets: [{
-        label: '未曾使用', // tootip 出現的名稱
-        lineTension: 0, // 曲線的彎度，設0 表示直線
-        backgroundColor: "#ea464d",
-        borderColor: "#ea464d",
-        borderWidth: 5,
-        data: [value], // 資料
-        fill: false, // 是否填滿色彩
-    }]
-  };
-  var ctx = document.getElementById("canvas").getContext("2d");
-  drawLineCanvas(ctx,lineChartData);
-}
-  function drawLineCanvas(ctx,data) {
-    window.myLine = new Chart(ctx, {  //先建立一個 chart
-        type: 'line', // 型態
-        data: data,
-        options: {
-                responsive: true,
-                legend: { //是否要顯示圖示
-                    display: true,
-                },
-                tooltips: { //是否要顯示 tooltip
-                    enabled: true
-                },
-                scales: {  //是否要顯示 x、y 軸
-                    xAxes: [{
-                        display: true
-                    }],
-                    yAxes: [{
-                        display: true
-                    }]
-                },
+//製圖 歷史室內人數
+function drawPersonChart(timestamp, value){
+  var ctx = document.getElementById('chart').getContext('2d');
+  var chart = new Chart(ctx, {
+    type:'line',
+    data:{
+      labels: timestamp,
+      datasets:[{
+        label: '歷史室內人數',// 圖名稱
+        lineTension:0, //曲線的彎曲
+        borderWith: 0,// 線條圖邊線寬
+        borderColor: 'rgba(54, 162, 235, 0.5)',// 線條圖邊線顏色
+        backgroundColor: 'rgba(54, 162, 235, 0.5)',// 線條圖背景色
+        fill: false,// 是否填滿色彩
+        data: value
+      }]
+    },
+    options:{
+      scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
             }
-    });
-};
+        }]
+      }
+    }
+  });
+}
