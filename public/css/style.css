@@ -3,11 +3,41 @@ body{
 }
 
 .indoorperson{
-    font-size: 25px;
     display: flex;
+    font-size: 25px;
 }
 
-.chart{
-    width: 1200px;
-    height: 400px;
+.smartsocketcontroltype{
+    display: flex;
+    font-size: 25px;
+}
+
+.smartsocketi{
+    display: flex;
+    font-size: 25px;
+}
+
+.smartsocketv{
+    display: flex;
+    font-size: 25px;
+}
+
+.smartsocketp{
+    display: flex;
+    font-size: 25px;
+}
+
+.smartsocketpf{
+    display: flex;
+    font-size: 25px;
+}
+
+.smartsocketstatus{
+    display: flex;
+    font-size: 25px;
+}
+
+#drawchart{
+    width: 100px;
+    height: 300px;
 }

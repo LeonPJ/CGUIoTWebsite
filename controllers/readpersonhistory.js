@@ -1,11 +1,10 @@
 var request = require('request');
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-
 module.exports = function(req, res, next) {//HTTP請求
     var options = {
         'method': 'GET',
-        'url': 'http://120.126.8.126/api/record/80a8b60f-739e-4b89-99c2-dafe21bdd89a?api_token=60kSeSf78sXjr0W9AtZoxMC9vIj1gzZP8GcdtHtTIaELm7PteocrYzBgjFVD',
+        'url': 'http://120.126.8.126/api/record/f9ab3971-77e2-4588-af64-bc93b0f17fba?api_token=60kSeSf78sXjr0W9AtZoxMC9vIj1gzZP8GcdtHtTIaELm7PteocrYzBgjFVD',
         'headers': {
           'Content-Type': 'application/x-www-form-urlencoded'
         }

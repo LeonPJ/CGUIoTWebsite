@@ -1,4 +1,51 @@
-<h1>智慧插座1</h1>
+<div id="SmartSocketTable">
+    <div class="SmartSocketControlRequest">
+        <input type="button" class="SmartsockeOnOff" value="開啟">
+        <input type="button" class="SmartsockeOnOff" value="關閉">
+        <input type="button" class="SmartsockeSetOff" value="定時開">
+        <input type="button" class="SmartsockeSetOn" value="定時關">
+    </div>
 
-<h1>智慧插座2</h1>
+    <div class="SmartSocketData">
+        <div class="smartsocketcontroltype">
+            控制模式:
+            <div id="readSmartsocketControlType"></div>
+        </div>
 
+        <div class="smartsocketi"><!--電流-->
+            電流有效值:
+            <div id="readSmartsocketI"></div>
+        </div>
+        
+        <div class="smartsocketv"><!--電壓-->
+            電壓有效值:
+            <div id="readSmartsocketV"></div>
+        </div>
+        
+        <div class="smartsocketp"><!--消耗功率-->
+            消耗功率:
+            <div id="readSmartsocketP"></div>
+        </div>
+        
+        <div class="smartsocketpf"><!--功率因數-->
+            功率因數:
+            <div id="readSmartsocketPF"></div>
+        </div>
+        
+        <div class="smartsocketstatus">
+            狀態:
+            <div id="readSmartsocketSTATUS"></div>
+        </div>
+    </div>
+
+    <div class="SmartSocketDataRequest">
+        <input type="button" class="SmartsockeI" value="電流歷史資料" onclick=readIHistory()>
+        <input type="button" class="SmartsockeV" value="電壓歷史資料" onclick=readVHistory()>
+        <input type="button" class="SmartsockeP" value="消耗功率歷史資料" onclick=readPHistory()>
+        <input type="button" class="SmartsockePF" value="功率因數歷史資料" onclick=readPFHistory()>
+    </div>
+    
+    <div class="SmartSocketDraw">
+        <canvas id="SmartSocketDrawChat" width="0" height="0"></canvas>
+    </div>
+</div>
