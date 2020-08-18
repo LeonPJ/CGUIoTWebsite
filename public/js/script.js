@@ -7,6 +7,18 @@ function entryload(){
   readPF();
   readStatus();
   readControlStatus();
+  readLightOneStatus();
+  readLightTwoStatus();
+  readLightThreeStatus();
+  readLightFourStatus();
+  readLightFiveStatus();
+  readLightSixStatus();
+  readCO();
+  readLPG();
+  readCO2();
+  readTEMP();
+  readHUM();
+  readFLAME();
 }
 
 //即時室內人數
@@ -124,7 +136,7 @@ function readPF(){
   
 }
 
-//即時智慧插座STATUS
+//即時智慧插座自動控制/手動控制狀態
 function readControlStatus(){
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -155,7 +167,7 @@ function readControlStatus(){
   
 }
 
-//即時智慧插座STATUS
+//即時智慧插座開啟/關閉狀態
 function readStatus(){
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -180,6 +192,330 @@ function readStatus(){
       }
 
       //document.getElementById("readSmartsocketSTATUS").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時區域1狀態
+function readLightOneStatus(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readlightonestatus", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      var readSmartsocketSTATUSString = JSON.parse(result);
+      if(readSmartsocketSTATUSString == "1"){
+        document.getElementById("readLightOneSTATUS").innerHTML = "開啟";
+      }else if(readSmartsocketSTATUSString == "0"){
+        document.getElementById("readLightOneSTATUS").innerHTML = "關閉";
+      }else{
+        document.getElementById("readLightOneSTATUS").innerHTML = "ERROR";
+      }
+
+      //document.getElementById("readSmartsocketSTATUS").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時區域2狀態
+function readLightTwoStatus(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readlighttwostatus", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      var readSmartsocketSTATUSString = JSON.parse(result);
+      if(readSmartsocketSTATUSString == "1"){
+        document.getElementById("readLightTwoSTATUS").innerHTML = "開啟";
+      }else if(readSmartsocketSTATUSString == "0"){
+        document.getElementById("readLightTwoSTATUS").innerHTML = "關閉";
+      }else{
+        document.getElementById("readLightTwoSTATUS").innerHTML = "ERROR";
+      }
+
+      //document.getElementById("readSmartsocketSTATUS").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時區域3狀態
+function readLightThreeStatus(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readlightthreestatus", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      var readSmartsocketSTATUSString = JSON.parse(result);
+      if(readSmartsocketSTATUSString == "1"){
+        document.getElementById("readLightThreeSTATUS").innerHTML = "開啟";
+      }else if(readSmartsocketSTATUSString == "0"){
+        document.getElementById("readLightThreeSTATUS").innerHTML = "關閉";
+      }else{
+        document.getElementById("readLightThreeSTATUS").innerHTML = "ERROR";
+      }
+
+      //document.getElementById("readSmartsocketSTATUS").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時區域4狀態
+function readLightFourStatus(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readlightfourstatus", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      var readSmartsocketSTATUSString = JSON.parse(result);
+      if(readSmartsocketSTATUSString == "1"){
+        document.getElementById("readLightFourSTATUS").innerHTML = "開啟";
+      }else if(readSmartsocketSTATUSString == "0"){
+        document.getElementById("readLightFourSTATUS").innerHTML = "關閉";
+      }else{
+        document.getElementById("readLightFourSTATUS").innerHTML = "ERROR";
+      }
+
+      //document.getElementById("readSmartsocketSTATUS").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時區域5狀態
+function readLightFiveStatus(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readlightfivestatus", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      var readSmartsocketSTATUSString = JSON.parse(result);
+      if(readSmartsocketSTATUSString == "1"){
+        document.getElementById("readLightFiveSTATUS").innerHTML = "開啟";
+      }else if(readSmartsocketSTATUSString == "0"){
+        document.getElementById("readLightFiveSTATUS").innerHTML = "關閉";
+      }else{
+        document.getElementById("readLightFiveSTATUS").innerHTML = "ERROR";
+      }
+
+      //document.getElementById("readSmartsocketSTATUS").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時區域6狀態
+function readLightSixStatus(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readlightsixstatus", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      var readSmartsocketSTATUSString = JSON.parse(result);
+      if(readSmartsocketSTATUSString == "1"){
+        document.getElementById("readLightSixSTATUS").innerHTML = "開啟";
+      }else if(readSmartsocketSTATUSString == "0"){
+        document.getElementById("readLightSixSTATUS").innerHTML = "關閉";
+      }else{
+        document.getElementById("readLightSixSTATUS").innerHTML = "ERROR";
+      }
+
+      //document.getElementById("readSmartsocketSTATUS").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時環境監控CO
+function readCO(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readenvironmentco", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      //var html = new EJS({url: 'views/readperson.ejs'});// 
+      document.getElementById("readEnvironmentCO").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時環境監控LPG
+function readLPG(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readenvironmentlpg", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      //var html = new EJS({url: 'views/readperson.ejs'});// 
+      document.getElementById("readEnvironmentLPG").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時環境監控CO2
+function readCO2(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readenvironmentco2", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      //var html = new EJS({url: 'views/readperson.ejs'});// 
+      document.getElementById("readEnvironmentCO2").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時環境監控TEMP
+function readTEMP(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readenvironmenttemp", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      //var html = new EJS({url: 'views/readperson.ejs'});// 
+      document.getElementById("readEnvironmentTEMP").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時環境監控HUM
+function readHUM(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readenvironmenthum", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      //var html = new EJS({url: 'views/readperson.ejs'});// 
+      document.getElementById("readEnvironmentHUM").innerHTML = result;
+    })// 接收 controllers readperson.js 回傳值
+
+    .catch(error => console.log('error', error));
+  
+}
+
+//即時環境監控FLAME
+function readFLAME(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch("/readenvironmentflame", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      //console.log(result);
+      //var html = new EJS({url: 'views/readperson.ejs'});// 
+      document.getElementById("readEnvironmentFLAME").innerHTML = result;
     })// 接收 controllers readperson.js 回傳值
 
     .catch(error => console.log('error', error));
@@ -326,6 +662,192 @@ function readPFHistory(){
   var sign = [];
 
   fetch("/readpfhistory", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      var arrayJSON = JSON.parse(result);
+      dataLength = arrayJSON.length;
+      for(let i=0; i<dataLength; i++) {// 計算物件內長度
+        timestamp[i] = arrayJSON[i].created_at;
+        value[i] = arrayJSON[i].value;
+        //sign[0] = arrayJSON[0].sign;
+      }
+      drawChart(timestamp, value, arrayJSON[0].sign);
+      //document.getElementById("readNumberPersonHistory").innerHTML = result;
+    })// 接收 controllers readpersonhistory.js 回傳值
+    .catch(error => console.log('error', error));
+}
+
+//歷史環境監控CO
+function readCoHistory(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  var timestamp = [];
+  var value = [];
+  var sign = [];
+
+  fetch("/readenvironmentcohistory", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      var arrayJSON = JSON.parse(result);
+      dataLength = arrayJSON.length;
+      for(let i=0; i<dataLength; i++) {// 計算物件內長度
+        timestamp[i] = arrayJSON[i].created_at;
+        value[i] = arrayJSON[i].value;
+        //sign[0] = arrayJSON[0].sign;
+      }
+      drawChart(timestamp, value, arrayJSON[0].sign);
+      //document.getElementById("readNumberPersonHistory").innerHTML = result;
+    })// 接收 controllers readpersonhistory.js 回傳值
+    .catch(error => console.log('error', error));
+}
+
+//歷史環境監控LPG
+function readLpgHistory(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  var timestamp = [];
+  var value = [];
+  var sign = [];
+
+  fetch("/readenvironmentlpghistory", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      var arrayJSON = JSON.parse(result);
+      dataLength = arrayJSON.length;
+      for(let i=0; i<dataLength; i++) {// 計算物件內長度
+        timestamp[i] = arrayJSON[i].created_at;
+        value[i] = arrayJSON[i].value;
+        //sign[0] = arrayJSON[0].sign;
+      }
+      drawChart(timestamp, value, arrayJSON[0].sign);
+      //document.getElementById("readNumberPersonHistory").innerHTML = result;
+    })// 接收 controllers readpersonhistory.js 回傳值
+    .catch(error => console.log('error', error));
+}
+
+//歷史環境監控CO2
+function readCo2History(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  var timestamp = [];
+  var value = [];
+  var sign = [];
+
+  fetch("/readenvironmentco2history", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      var arrayJSON = JSON.parse(result);
+      dataLength = arrayJSON.length;
+      for(let i=0; i<dataLength; i++) {// 計算物件內長度
+        timestamp[i] = arrayJSON[i].created_at;
+        value[i] = arrayJSON[i].value;
+        //sign[0] = arrayJSON[0].sign;
+      }
+      drawChart(timestamp, value, arrayJSON[0].sign);
+      //document.getElementById("readNumberPersonHistory").innerHTML = result;
+    })// 接收 controllers readpersonhistory.js 回傳值
+    .catch(error => console.log('error', error));
+}
+
+//歷史環境監控TEMP
+function readTempHistory(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  var timestamp = [];
+  var value = [];
+  var sign = [];
+
+  fetch("/readenvironmenttemphistory", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      var arrayJSON = JSON.parse(result);
+      dataLength = arrayJSON.length;
+      for(let i=0; i<dataLength; i++) {// 計算物件內長度
+        timestamp[i] = arrayJSON[i].created_at;
+        value[i] = arrayJSON[i].value;
+        //sign[0] = arrayJSON[0].sign;
+      }
+      drawChart(timestamp, value, arrayJSON[0].sign);
+      //document.getElementById("readNumberPersonHistory").innerHTML = result;
+    })// 接收 controllers readpersonhistory.js 回傳值
+    .catch(error => console.log('error', error));
+}
+
+//歷史環境監控HUM
+function readHumHistory(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  var timestamp = [];
+  var value = [];
+  var sign = [];
+
+  fetch("/readenvironmenthumhistory", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+      var arrayJSON = JSON.parse(result);
+      dataLength = arrayJSON.length;
+      for(let i=0; i<dataLength; i++) {// 計算物件內長度
+        timestamp[i] = arrayJSON[i].created_at;
+        value[i] = arrayJSON[i].value;
+        //sign[0] = arrayJSON[0].sign;
+      }
+      drawChart(timestamp, value, arrayJSON[0].sign);
+      //document.getElementById("readNumberPersonHistory").innerHTML = result;
+    })// 接收 controllers readpersonhistory.js 回傳值
+    .catch(error => console.log('error', error));
+}
+
+//歷史環境監控FLAME
+function readFlameHistory(){
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  var timestamp = [];
+  var value = [];
+  var sign = [];
+
+  fetch("/readenvironmentflamehistory", requestOptions)
     .then(response => response.text())
     .then(result => {
       var arrayJSON = JSON.parse(result);

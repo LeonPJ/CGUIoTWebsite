@@ -15,25 +15,37 @@
 <body onload=entryload()>
     
 <!--<body>-->
-    <div id="IndoorPerson">
-        <%- include('numberperson'); %><!--室內人數-->
-    </div>
-    
-    <div id="SmarkSocket">
-        <%- include('smartsocket'); %><!--智慧插座-->
+<div id="StudyRoom">
+    <div id="DeviceTable">
+
+        <div id="SmarkSocket">
+            <p>智慧插座</p>
+            <%- include('smartsocket'); %><!--智慧插座-->
+        </div>
+        <hr>
+        <div id="IndoorPerson">
+            <p>進入/離開人數監控</p>
+            <%- include('numberperson'); %><!--室內人數-->
+        </div>
+        <hr>
+        <div id="Environment">
+            <p>環境監控</p>
+            <%- include('environment'); %><!--環境監控-->
+        </div>
+        <hr>
+        <div id="light">
+            <p>智慧插座(電燈)</p>
+            <%- include('light'); %><!--燈具-->
+        </div>
     </div>
 
-    <div id="light">
-        <%- include('light'); %><!--燈具-->
+    <div id="DrawTable">
+        <div id="DrawChart">
+            <%- include('drawchart'); %>
+        </div>
     </div>
+</div>
 
-    <div id="Environment">
-        <%- include('environment'); %><!--環境監控-->
-    </div>
-
-    <div id="DrawChart">
-        <%- include('drawchart'); %>
-    </div>
 
 </body>
 </html>

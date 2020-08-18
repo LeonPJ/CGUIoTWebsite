@@ -4,7 +4,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 module.exports = function(req, res, next) {//HTTP請求
     var options = {
         'method': 'GET',
-        'url': 'http://120.126.8.126/api/record/c89d2854-a2ba-49b8-94ba-d105f3fdda9a?api_token=60kSeSf78sXjr0W9AtZoxMC9vIj1gzZP8GcdtHtTIaELm7PteocrYzBgjFVD',
+        'url': 'http://120.126.8.126/api/record/bc496b8e-625d-47d7-850d-157e5687bc2d?api_token=60kSeSf78sXjr0W9AtZoxMC9vIj1gzZP8GcdtHtTIaELm7PteocrYzBgjFVD',
         'headers': {
           'Content-Type': 'application/x-www-form-urlencoded'
         }

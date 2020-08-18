@@ -2,42 +2,205 @@ body{
     font-family: cursive, Arial, sans-serif;
 }
 
+#StudyRoom{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#SmartSocketTable{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+}
+
+#EnvironmentTable{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+}
+
+#PeopleTable{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+}
+
+#drawchart{
+    width: 800px;
+    height: 300px;
+}
+
+p{
+    font-size: 20px;
+    display: flex;
+    justify-content:center;
+}
+
+input{
+    width:150px;
+    height:30px;
+    margin:5px;
+}
+
+hr{
+    width:100%;
+}
+
 .indoorperson{
     display: flex;
-    font-size: 25px;
+    justify-content:flex-start;
+    font-size: 20px;
 }
 
 .smartsocketcontroltype{
     display: flex;
-    font-size: 25px;
+    justify-content:flex-start;
+    font-size: 20px;
 }
 
 .smartsocketi{
     display: flex;
-    font-size: 25px;
+    justify-content:flex-start;
+    font-size: 20px;
 }
 
 .smartsocketv{
     display: flex;
-    font-size: 25px;
+    justify-content:flex-start;
+    font-size: 20px;
 }
 
 .smartsocketp{
     display: flex;
-    font-size: 25px;
+    justify-content:flex-start;
+    font-size: 20px;
 }
 
 .smartsocketpf{
     display: flex;
-    font-size: 25px;
+    justify-content:flex-start;
+    font-size: 20px;
 }
 
 .smartsocketstatus{
     display: flex;
-    font-size: 25px;
+    justify-content:flex-start;
+    font-size: 20px;
 }
 
-#drawchart{
-    width: 100px;
-    height: 300px;
+.lighonestatus{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.lighttwostatus{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.lightthreestatus{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.lightfourstatus{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.lightfivestatus{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.lightsixstatus{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.environmentco{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.environmentlpg{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.environmentco2{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.environmenttemp{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.environmenthum{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.environmentflame{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 20px;
+}
+
+.SmartSocketControlRequest{
+    display: flex;
+    flex-direction:column;
+}
+
+.PeopleData{
+    display: flex;
+    flex-direction:column;
+}
+
+.LightData{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.SmartSocketData{
+    display: flex;
+    flex-direction:column;
+}
+
+.EnvironmentData{
+    display: flex;
+    flex-direction:column;
+}
+
+.IndoorPersonDataRequest{
+    display: flex;
+    flex-direction:column;
+}
+
+.SmartSocketDataRequest{
+    display: flex;
+    flex-direction:column;
+}
+
+.EnvironmentDataRequest{
+    display: flex;
+    flex-direction:column;
 }

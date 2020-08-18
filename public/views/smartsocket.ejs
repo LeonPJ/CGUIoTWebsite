@@ -1,4 +1,5 @@
 <div id="SmartSocketTable">
+    
     <div class="SmartSocketControlRequest">
         <input type="button" class="SmartsockeOnOff" value="開啟">
         <input type="button" class="SmartsockeOnOff" value="關閉">
@@ -15,16 +16,19 @@
         <div class="smartsocketi"><!--電流-->
             電流有效值:
             <div id="readSmartsocketI"></div>
+            A
         </div>
         
         <div class="smartsocketv"><!--電壓-->
             電壓有效值:
             <div id="readSmartsocketV"></div>
+            V
         </div>
         
         <div class="smartsocketp"><!--消耗功率-->
             消耗功率:
             <div id="readSmartsocketP"></div>
+            W
         </div>
         
         <div class="smartsocketpf"><!--功率因數-->
@@ -44,8 +48,5 @@
         <input type="button" class="SmartsockeP" value="消耗功率歷史資料" onclick=readPHistory()>
         <input type="button" class="SmartsockePF" value="功率因數歷史資料" onclick=readPFHistory()>
     </div>
-    
-    <div class="SmartSocketDraw">
-        <canvas id="SmartSocketDrawChat" width="0" height="0"></canvas>
-    </div>
+
 </div>

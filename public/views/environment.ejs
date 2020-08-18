@@ -1,2 +1,50 @@
-<h1>環境監控</h1>
-<button class="btn-post">Create</button>
+<div id="EnvironmentTable">
+
+    <div class="EnvironmentData">
+        <div class="environmentco">
+            一氧化碳濃度:
+            <div id="readEnvironmentCO"></div>
+            ppm
+        </div>
+
+        <div class="environmentlpg">
+            液化石油氣濃度:
+            <div id="readEnvironmentLPG"></div>
+            ppm
+        </div>
+
+        <div class="environmentco2">
+            二氧化碳濃度:
+            <div id="readEnvironmentCO2"></div>
+            ppm
+        </div>
+
+        <div class="environmenttemp">
+            溫度:
+            <div id="readEnvironmentTEMP"></div>
+            °C
+        </div>
+
+        <div class="environmenthum">
+            濕度:
+            <div id="readEnvironmentHUM"></div>
+            %
+        </div>
+
+        <div class="environmentflame">
+            發現火焰:
+            <div id="readEnvironmentFLAME"></div>
+        </div>
+
+    </div>
+
+    <div class="EnvironmentDataRequest">
+        <input type="button" class="EnvironmentCO" value="一氧化碳歷史資料" onclick=readCoHistory()>
+        <input type="button" class="EnvironmentLPG" value="液化石油氣歷史資料" onclick=readLpgHistory()>
+        <input type="button" class="EnvironmentCO2" value="二氧化碳歷史資料" onclick=readCo2History()>
+        <input type="button" class="EnvironmentTEMP" value="溫度歷史資料" onclick=readTempHistory()>
+        <input type="button" class="EnvironmentHUM" value="濕度歷史資料" onclick=readHumHistory()>
+        <input type="button" class="EnvironmentFLAME" value="發現火焰歷史資料" onclick=readFlameHistory()>
+    </div>
+
+</div>
