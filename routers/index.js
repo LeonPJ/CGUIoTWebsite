@@ -1,7 +1,10 @@
 var express = require('express'),
     Chart   = require('chart.js'),
     router  = express.Router(),
+<<<<<<< HEAD
     Chart   = require('chart.js'),
+=======
+>>>>>>> 777aaa0397fb6eefbe2813fcdd9780e3c548b575
     index   = require('../controllers/index'),
     readperson = require('../controllers/readperson'),
     readpersonhistory = require('../controllers/readpersonhistory'),
